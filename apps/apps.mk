@@ -44,7 +44,7 @@ PRODUCT_COPY_FILES += \
 # Google apps and services
 ifeq ($(WITH_GMS),true)
 
-$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+$(call inherit-product, vendor/gms/products/gms.mk)
 
 # SetupWizard
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -58,9 +58,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Client ID
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.clientidbase=android-google \
-
-# Overlays
-PRODUCT_PACKAGE_OVERLAYS += $(LOCAL_PATH)/gms_overlay
 
 endif
 
